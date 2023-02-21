@@ -1,0 +1,105 @@
+table {
+  width: 100%;
+  font-size: 19px;
+}
+
+thead {
+  width: 100%;
+  height: 40px;
+  font-weight: 700;
+  border-top: 1px solid rgb(211, 208, 208);
+  border-bottom: 1px solid rgb(214, 204, 204);
+}
+
+th {
+  width: 150px;
+  & a {
+    display: block;
+    width: 100%;
+    color: black;
+    text-decoration: none;
+    outline: none;
+    & img {
+      height: 25px;
+      width: 25px;
+    }
+  }
+}
+
+
+tbody {
+  text-align: center;
+}
+
+tr {
+  line-height: 2;
+  height: 50px;
+}
+td {
+  padding: 5px;
+}
+
+#check {
+  width: 16px;
+  height: 16px;
+}
+
+tr:hover {
+  background-color: rgb(224, 222, 222);
+}
+
+#editText {
+  width: 150px;
+  border: 1px solid lightgrey;
+  outline: none;
+  border-radius: 5px;
+}
+
+.edit, .save {
+  width: 60px;
+  height: 30px;
+  background-color: rgb(255, 179, 0);
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+
+.delete {
+  width: 80px;
+  height: 30px;
+  background-color: rgba(221, 42, 42, 0.89);
+  color: white;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+
+.save {
+  width: 60px;
+  background-color: forestgreen;
+  color: white;
+}
+
+.edit:hover, .delete:hover {
+  filter: brightness(70%);
+}
+
+.edit:active {
+  box-shadow: 0 0 10px rgb(228, 198, 51);
+}
+
+.delete:active {
+  box-shadow: 0 0 10px red;
+}
+
+.done {
+  color: forestgreen;
+}
+
+.progress {
+  color: red;
+}
+
+.modal {
+  filter: brightness(70%);
+}

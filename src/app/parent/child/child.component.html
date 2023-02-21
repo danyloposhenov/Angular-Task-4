@@ -1,0 +1,41 @@
+<div class="list">
+  <table>
+    <thead>
+      <tr>
+        <th>
+          <a href="#" (click)="sortFirstName('firstName')">First name
+              <img src="assets/images/angle-up.svg" alt="" *ngIf="fNameUp">
+              <img src="assets/images/angle-down.svg" alt="" *ngIf="fNameDown">
+          </a>
+        </th>
+        <th>
+          <a href="#" (click)="sortLastName('lastName')">Last name
+            <img src="assets/images/angle-up.svg" alt="" *ngIf="lNameUp">
+            <img src="assets/images/angle-down.svg" alt="" *ngIf="lNameDown">
+          </a>
+        </th>
+        <th>
+          <a href="#" (click)="sortNumber('number')">Number
+            <img src="assets/images/angle-up.svg" alt="" *ngIf="numberUp">
+            <img src="assets/images/angle-down.svg" alt="" *ngIf="numberDown">
+          </a>
+        </th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody id="tbody">
+      <tr *ngFor="let info of list | search:field | sort:type; let i = index ">
+        <td>{{ info.firstName }}</td>
+        <td>{{ info.lastName}}</td>
+        <td>{{ info.number }}</td>
+        <td>
+          <button class="edit" (click)="edit(i)">Edit</button>
+        </td>
+        <td>
+          <button class="delete" (click)="delete(i)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
